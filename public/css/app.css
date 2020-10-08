@@ -1,0 +1,105 @@
+.titleHeader {
+  background-color: #5a5a5a;
+  height: 50px;
+  width: 1344px;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.legendApp {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cBody {
+  border: 0px solid #f2f2f2;
+  background-color: #f2f2f2;
+  border-radius: 0.25rem;
+}
+
+.cardApp {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.btnGetOpe {
+  border: 2px solid #b12322;
+  color: #b12322;
+}
+
+.btnCalculSolde {
+  border: 2px solid #5a5a5a;
+  color: #5a5a5a;
+}
+
+.hoverToRuby:hover {
+  color: white !important;
+  background-color: #b12322 !important;
+}
+
+.hoverToGrey:hover {
+  color: white !important;
+  background-color: #5a5a5a !important;
+}
+
+.headerTable {
+  background: #b12322 !important;
+  text-align: center;
+  color: white;
+  font-size: 10px !important;
+}
+
+.bodyTable {
+  font-size: 12px !important;
+}
+
+.snackbarToast {
+  min-width: 200px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  text-align: center;
+  border-radius: 10px 10px;
+  padding: 9px;
+  position: fixed;
+  z-index: 1;
+  top: 62px;
+  right: 61px;
+  font-size: 14px;
+  -webkit-animation: cssAnimation 5s forwards;
+  animation: cssAnimation 5s forwards;
+}
+
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
