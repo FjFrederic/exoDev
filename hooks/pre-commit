@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Un des défauts du script c'est que si le php plante
+# phpunit retourne un code d'erreur 0 (par exemple lors d'un parse error)
+# Il se peut qu'on commit passe alors que un test echoue
+
+nbPhpFilesModified=$(git diff HEAD --name-only | grep .php | wc -l)
+
+if [[ $nbPhpFilesModified -gt 0 ]]
+then
+    cmd="./vendor/phpunit/phpunit/phpunit --testdox --exclude-group ignore"
+
+    echo "Lancement des tests unitaires car des fichiers php ont été modifiés."
+
+    $cmd
+    status=$?
+
+    [ $status -eq 0 ] && echo "All tests OK !" || echo "Impossible de commit car les tests échouent !"
+
+    exit $status
+fi
